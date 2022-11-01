@@ -32,7 +32,7 @@ spec:
         image: 765415433338.dkr.ecr.eu-central-1.amazonaws.com/openui5-fhir:$IMAGE_TAG
         imagePullPolicy: Always
         ports:
-        - containerPort: 8080
+        - containerPort: 80
 
 ---
 
