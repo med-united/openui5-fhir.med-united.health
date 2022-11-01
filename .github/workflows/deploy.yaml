@@ -29,6 +29,8 @@ jobs:
           ECR_REPOSITORY: care
           IMAGE_TAG: ${{ github.sha }}
         run: |
+          npm install
+          ./node_modules/.bin/ui5 build 
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
